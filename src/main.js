@@ -4,6 +4,23 @@ import Vue from 'vue'    //引入vue 文件
 import VueRouter from 'vue-router'  // 导入路由
 Vue.use(VueRouter)  //手动开启路由
 
+import { Lazyload } from 'mint-ui'; //导入懒加载
+Vue.use(Lazyload);
+
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
+//配置
+Vue.use(VuePreview, {
+  mainClass: 'pswp--minimal--dark',
+  barsSize: {top: 0, bottom: 0},
+  captionEl: false,
+  fullscreenEl: false,
+  shareEl: false,
+  bgOpacity: 0.85,
+  tapToClose: true,
+  tapToToggleControls: false
+})
+
 
 import moment from 'moment'  // 导入格式化时间的插件 未下载
 Vue.filter('dateFormat', function (dataStr, pattern ) { // 定义全局的过滤器
@@ -21,10 +38,11 @@ import './lib/mui/css/icons-extra.css' //引入mui 字体图标
 import 'mint-ui/lib/style.css' 
 
 
-import { Header, Swipe, SwipeItem } from 'mint-ui'    // 按需导入 Mint-UI 中的组件
+import { Header, Swipe, SwipeItem ,Button} from 'mint-ui'    // 按需导入 ;  Mint-UI 中的组件
 Vue.component(Header.name, Header)
 Vue.component(Swipe.name, Swipe)      //挂载轮播图
 Vue.component(SwipeItem.name, SwipeItem)
+Vue.component(Button.name, Button)
 
 import router from './router.js'  //导入自己的路由
 import app from './App.vue'   //导入app 根组件

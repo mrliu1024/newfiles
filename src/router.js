@@ -10,6 +10,9 @@ import search from './components/tabbar/search.vue'
 // path 后面是 router-link to 的路径, 路由规则 , path 
 import newlist from './components/news/newslist.vue'
 import newinfo from './components/news/newsinfo.vue'
+import phlist from './components/photos/poptlis.vue'
+import shop from './components/shoppings/shop.vue'
+import phoninfo from './components/photos/photoinfo.vue'
 
 var router = new VueRouter({
   routes: [   //四个 路由规则的书写
@@ -20,6 +23,12 @@ var router = new VueRouter({
     { path: '/search', component: search },
     {path:'/home/newslist',component:newlist},
     {path:'/home/newsinfo/:id',component:newinfo},
+    {path:'/home/phlist',component:phlist},
+    {path:'/home/photoinfo/:id',component:phoninfo},    
+    {path:'/home/shop',component:shop},
+
+    
+    
     
   ],
   linkActiveClass: 'mui-active' // 覆盖默认的路由高亮的类，默认的类叫做 router-link-active

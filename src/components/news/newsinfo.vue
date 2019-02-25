@@ -17,7 +17,7 @@
     <comment-box :id="this.id"></comment-box>
   </div>
 </template>
-
+ 
 <script>
 // 1. 导入 评论子组件 , 导入之后记得挂载 , 因为 , 评论用的比较多, 抽离出来当组件
 import comment from "../son/sonsays.vue";
